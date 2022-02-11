@@ -21,7 +21,7 @@ function* onLoadWorksStartAsync({ payload }) {
     try {
         const response = yield call(loadWorksApi, payload);
         if(response.status === 200) {
-            yield delay(500);
+            yield delay(300);
             yield put(loadWorksSuccess(response.data));
         }
     } catch(error) {
@@ -38,7 +38,7 @@ function* onLoadWorkStartAsync({ payload }) {
     try {
         const response = yield call(loadWorkApi, payload);
         if(response.status === 200) {
-            yield delay(500);
+            yield delay(300);
             yield put(loadWorkSuccess(response.data));
         }
     } catch(error) {
@@ -87,7 +87,7 @@ function* onDeleteWorkStartAsync({ payload }) {
     try {
         const response = yield call(deleteWorkApi, payload);
         if(response.status === 204) {
-            yield delay(500);
+            yield delay(300);
             yield put(deleteWorkSuccess(payload));
         }
     } catch(error) {
